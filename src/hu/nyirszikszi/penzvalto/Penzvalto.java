@@ -15,13 +15,18 @@ public class Penzvalto {
         this.penz = penz;
     }
 
+    public int db(int penz, int cimlet) {
+        return penz / cimlet;
+    }
+
     public void felvalt(int[] cimletek) {
         String eredmeny = "bent van:\t" + getPenz() + "\n";
 
         for (int cimlet : cimletek) {
             if(this.penz / cimlet != 0 && (cimlet==5000 || cimlet==2000 || cimlet==1000 || cimlet==500)) {
                 int db = 0;
-                db = this.penz / cimlet;
+                //db = this.penz / cimlet;
+                db = db(this.penz, cimlet);
                 this.penz -= db * cimlet;
                 eredmeny += db + "\t*\t" + cimlet + "\nbent van:\t" + getPenz() + "\n";
             }
