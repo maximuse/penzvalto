@@ -15,7 +15,7 @@ public class Penzvalto {
         this.penz = penz;
     }
 
-    public int db(int penz, int cimlet) {
+    private int db(int penz, int cimlet) {
         return penz / cimlet;
     }
 
@@ -25,13 +25,12 @@ public class Penzvalto {
         for (int cimlet : cimletek) {
             if(this.penz / cimlet != 0 && (cimlet==5000 || cimlet==2000 || cimlet==1000 || cimlet==500)) {
                 int db = 0;
-                //db = this.penz / cimlet;
                 db = db(this.penz, cimlet);
                 this.penz -= db * cimlet;
-                eredmeny += db + "\t*\t" + cimlet + "\nbent van:\t" + getPenz() + "\n";
+                eredmeny += db + "\t*\t" + cimlet + "\nbent maradt:\t" + getPenz() + "\n";
             }
             else {
-                eredmeny += cimlet + " címletet nem lehet kikérni\n";
+                eredmeny += cimlet + " címletet nem lehet kikérni\nbent maradt:\t" + getPenz() + "\n";
             }
         }
 
