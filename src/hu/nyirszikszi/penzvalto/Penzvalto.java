@@ -15,8 +15,7 @@ public class Penzvalto {
         this.penz = penz;
     }
 
-    public void felvalt() {
-        int[] cimletek = {5000, 2000, 1000, 500};
+    public void felvalt(int[] cimletek) {
         String eredmeny = "bent van:\t" + getPenz() + "\n";
 
         for (int cimlet : cimletek) {
