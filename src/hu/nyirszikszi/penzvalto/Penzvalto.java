@@ -17,7 +17,7 @@ public class Penzvalto {
 
     public void felvalt() {
         int[] cimletek = {5000, 2000, 1000, 500};
-        String eredmeny = "";
+        String eredmeny = "bent van:\t" + getPenz() + "\n";
 
         for (int cimlet : cimletek) {
             if(this.penz / cimlet != 0) {
